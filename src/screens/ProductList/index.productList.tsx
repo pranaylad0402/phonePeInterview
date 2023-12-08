@@ -65,9 +65,7 @@ const ListItemComponent = ({data = {}, opListItem = () => {}}) => {
         <Image source={{uri: thumbnail}} style={styles.imgContainer} />
       </View>
       <View style={styles.itemBodyContainer}>
-        <View style={{flex: 1}}>
-          <Text>{title}</Text>
-        </View>
+        <Text style={{width: '100%'}}>{title}</Text>
 
         <View style={styles.row}>
           <StarRatingDisplay
@@ -108,7 +106,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
   },
   imgContainer: {height: 100, width: 100},
-  itemBodyContainer: {paddingLeft: 8},
+  itemBodyContainer: {paddingLeft: 8, flexWrap: 'wrap', flex: 1},
   row: {flexDirection: 'row'},
   discountPercentage: {
     fontSize: 18,
